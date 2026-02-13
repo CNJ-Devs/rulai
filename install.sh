@@ -4,12 +4,12 @@
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 #
 # Usage:
-#   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ipmotionmc/claude-rules/main/install.sh)"
+#   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JiahaoZhu11/claude-rules/main/install.sh)"
 #
 set -euo pipefail
 
 # ── Change this to your repo ──
-REMOTE_BASE="${CLAUDE_RULES_REMOTE:-https://raw.githubusercontent.com/ipmotionmc/claude-rules/main}"
+REMOTE_BASE="${CLAUDE_RULES_REMOTE:-https://raw.githubusercontent.com/JiahaoZhu11/claude-rules/main}"
 INSTALL_DIR="${CLAUDE_RULES_HOME:-${HOME}/.local/bin}"
 BIN_NAME="claude-rules"
 
@@ -34,7 +34,7 @@ else
   printf "${RED}failed${NC}\n"
   echo ""
   printf "  ${RED}Could not download from:${NC}\n"
-  echo "  ${REMOTE_BASE}/${BIN_NAME}"
+  echo "  ${REMOTE_BASE}/bin/${BIN_NAME}"
   echo ""
   echo "  If you're installing from a local copy, run:"
   echo "    cp claude-rules ${INSTALL_DIR}/${BIN_NAME} && chmod +x ${INSTALL_DIR}/${BIN_NAME}"
