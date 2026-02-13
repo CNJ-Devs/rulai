@@ -26,7 +26,7 @@ Coding agent 很强，但在实际使用中你是不是经常遇到这些情况�
 ## 安装
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/CNJ-Devs/rulai/main/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/CNJ-Devs/rulai/master/install.sh)"
 ```
 
 CLI 会安装到 `~/.local/bin/rulai`。如果该目录不在 `PATH` 里，安装脚本会提示你添加。

@@ -26,7 +26,7 @@ RulAI —— コーディングエージェント向けのインタラクショ�
 ## インストール
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/CNJ-Devs/rulai/main/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/CNJ-Devs/rulai/master/install.sh)"
 ```
 
 CLI は `~/.local/bin/rulai` にインストールされます。このディレクトリが `PATH` に含まれていない場合、インストーラーが追加を案内します。
