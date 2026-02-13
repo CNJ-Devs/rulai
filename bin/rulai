@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# claude-rules  —  Claude Code interaction rules CLI
+# rulai  —  Claude Code interaction rules CLI
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 set -euo pipefail
 
 VERSION="1.0.0"
-CONFIG_FILE=".claude-rules"
+CONFIG_FILE=".rulai"
 
 # ── Change this to your repo ──
-REMOTE_BASE="${CLAUDE_RULES_REMOTE:-https://raw.githubusercontent.com/JiahaoZhu11/claude-rules/main}"
+REMOTE_BASE="${RULAI_REMOTE:-https://raw.githubusercontent.com/CNJ-Devs/rulai/main}"
 
 # ─── Colors ──────────────────────────────────────────
 RED='\033[0;31m'    GREEN='\033[0;32m'
@@ -54,7 +54,7 @@ ask_yn() {
 
 header() {
   echo "" >&2
-  printf "  ${BOLD}${BLUE}claude-rules${NC}  ${DIM}v${VERSION}${NC}\n" >&2
+  printf "  ${BOLD}${BLUE}RulAI${NC}  ${DIM}v${VERSION}${NC}\n" >&2
   printf "  ${DIM}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n" >&2
   echo "" >&2
 }
@@ -83,8 +83,8 @@ load_config() {
 
 save_config() {
   cat > "$CONFIG_FILE" <<EOF
-# claude-rules config — auto-generated
-# Run 'claude-rules setup' to change.
+# rulai config — auto-generated
+# Run 'rulai setup' to change.
 VERSION="${VERSION}"
 RULES_PATH="${rules_path}"
 LESSONS_PATH="${lessons_path}"
@@ -241,13 +241,13 @@ LESSONS
 
 cmd_help() {
   header
-  printf "  ${BOLD}Usage${NC}:  claude-rules <command>\n" >&2
+  printf "  ${BOLD}Usage${NC}:  rulai <command>\n" >&2
   echo "" >&2
   printf "  ${BOLD}Commands${NC}\n" >&2
   echo "  ─────────────────────────────" >&2
   printf "  ${GREEN}setup${NC}     Initialize interaction rules in current project\n" >&2
   printf "  ${GREEN}status${NC}    Show current config and file status\n" >&2
-  printf "  ${GREEN}update${NC}    Update claude-rules CLI to the latest version\n" >&2
+  printf "  ${GREEN}update${NC}    Update RulAI CLI to the latest version\n" >&2
   printf "  ${GREEN}version${NC}   Show version (and check for updates)\n" >&2
   printf "  ${GREEN}help${NC}      Show this help\n" >&2
   echo "" >&2
@@ -258,7 +258,7 @@ cmd_help() {
   printf "  ${BOLD}Quick start${NC}\n" >&2
   echo "  ─────────────────────────────" >&2
   echo "  cd your-project" >&2
-  echo "  claude-rules setup" >&2
+  echo "  rulai setup" >&2
   echo "" >&2
 }
 
@@ -327,14 +327,14 @@ cmd_setup() {
   printf "  ${GREEN}${BOLD}Done!${NC} Interaction rules are ready.\n" >&2
   echo "" >&2
   info "Claude Code will pick up the rules automatically via CLAUDE.md."
-  info "Run 'claude-rules setup' again anytime to reconfigure."
+  info "Run 'rulai setup' again anytime to reconfigure."
 }
 
 # ─── status ──────────────────────────────────────────
 
 cmd_status() {
   if ! load_config; then
-    err "No config found. Run 'claude-rules setup' first."
+    err "No config found. Run 'rulai setup' first."
     return 1
   fi
 
@@ -361,7 +361,7 @@ cmd_status() {
 # ─── version ─────────────────────────────────────────
 
 cmd_version() {
-  printf "claude-rules ${BOLD}v${VERSION}${NC}\n" >&2
+  printf "RulAI ${BOLD}v${VERSION}${NC}\n" >&2
 
   # Check for updates
   printf "${DIM}Checking for updates...${NC} " >&2
@@ -372,7 +372,7 @@ cmd_version() {
       printf "${GREEN}up to date${NC}\n" >&2
     else
       printf "${YELLOW}v${remote_version} available${NC}\n" >&2
-      info "Run 'claude-rules update' to upgrade."
+      info "Run 'rulai update' to upgrade."
     fi
   else
     printf "${DIM}could not check (network error)${NC}\n" >&2
@@ -394,7 +394,7 @@ cmd_update() {
   local remote_version
   if ! remote_version=$(curl -fsSL "${REMOTE_BASE}/VERSION" 2>/dev/null); then
     printf "${RED}failed${NC}\n" >&2
-    err "Could not reach remote. Check your network or CLAUDE_RULES_REMOTE."
+    err "Could not reach remote. Check your network or RULAI_REMOTE."
     return 1
   fi
   remote_version=$(echo "$remote_version" | tr -d '[:space:]')
@@ -408,7 +408,7 @@ cmd_update() {
   info "Updating v${VERSION} → v${remote_version}..."
 
   local tmp_file="${self_path}.tmp.$$"
-  if ! curl -fsSL "${REMOTE_BASE}/bin/claude-rules" -o "$tmp_file" 2>/dev/null; then
+  if ! curl -fsSL "${REMOTE_BASE}/bin/rulai" -o "$tmp_file" 2>/dev/null; then
     err "Download failed."
     rm -f "$tmp_file"
     return 1
@@ -419,7 +419,7 @@ cmd_update() {
 
   echo "" >&2
   success "Updated to v${remote_version}"
-  info "Run 'claude-rules setup' in your projects to regenerate rules with the latest template."
+  info "Run 'rulai setup' in your projects to regenerate rules with the latest template."
 }
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
