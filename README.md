@@ -1,7 +1,7 @@
 # claude-rules
 
 <!-- logo（之后替换）-->
-<!-- <p align="center"><img src="assets/logo.svg" width="120" /></p> -->
+<!-- <p align="center"><img src="doc/assets/logo.svg" width="120" /></p> -->
 
 > 一键为任何项目初始化 Claude Code 交互规则 —— 调试升级、卡住处理、反思机制等，开箱即用。
 
