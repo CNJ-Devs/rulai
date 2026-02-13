@@ -1,7 +1,7 @@
 <div align="center">
 
 <img src="./assets/logo.svg" width="300" alt="RulAI logo" />
-<br>
+<br></br>
 
 RulAI —— コーディングエージェント向けのインタラクションルールをすぐに使える形で提供：デバッグエスカレーション、エラーサーキットブレーカー、振り返りなど、ワンコマンドで初期化。
 

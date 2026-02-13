@@ -1,7 +1,7 @@
 <div align="center">
 
 <img src="./assets/logo.svg" width="300" alt="RulAI logo" />
-<br>
+<br></br>
 
 RulAI —— 开箱即用的 coding agent 交互规则：调试升级、错误熔断、反思机制，一键初始化。
 

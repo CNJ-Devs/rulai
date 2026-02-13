@@ -1,7 +1,7 @@
 <div align="center">
 
 <img src="docs/assets/logo.svg" width="300" alt="RulAI logo" />
-<br>
+<br></br>
 
 RulAI — Out-of-the-box interaction rules for coding agents: debug escalation, error circuit-breaking, reflection, and more.
 
