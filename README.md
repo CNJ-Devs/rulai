@@ -26,7 +26,7 @@ Coding agents are powerful, but you've probably run into these issues:
 ## Installation
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/CNJ-Devs/rulai/main/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/CNJ-Devs/rulai/master/install.sh)"
 ```
 
 The CLI installs to `~/.local/bin/rulai`. If that directory isn't in your `PATH`, the installer will prompt you to add it.

@@ -4,12 +4,12 @@
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 #
 # Usage:
-#   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/CNJ-Devs/rulai/main/install.sh)"
+#   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/CNJ-Devs/rulai/master/install.sh)"
 #
 set -euo pipefail
 
 # ── Change this to your repo ──
-REMOTE_BASE="${RULAI_REMOTE:-https://raw.githubusercontent.com/CNJ-Devs/rulai/main}"
+REMOTE_BASE="${RULAI_REMOTE:-https://raw.githubusercontent.com/CNJ-Devs/rulai/master}"
 INSTALL_DIR="${RULAI_HOME:-${HOME}/.local/bin}"
 BIN_NAME="rulai"
 
