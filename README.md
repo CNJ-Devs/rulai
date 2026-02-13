@@ -1,51 +1,52 @@
 <div align="center">
 
-<img src="docs/assets/logo.svg" width="300" alt="claude-rules logo" />
+<img src="docs/assets/logo.svg" width="300" alt="RulAI logo" />
+<br>
 
-Claude Code 交互规则初始化工具 —— 调试升级、错误熔断、反思机制等，开箱即用。
+RulAI —— 开箱即用的 coding agent 交互规则：调试升级、错误熔断、反思机制，一键初始化。
 
-<a href="#安装">安装</a> &nbsp;·&nbsp;
-<a href="#使用">使用</a> &nbsp;·&nbsp;
-<a href="#规则一览">规则一览</a> &nbsp;·&nbsp;
-<a href="#license">License</a>
+<a href="./docs/README.en.md">English</a> &nbsp;·&nbsp;
+<a href="./README.md">简体中文</a> &nbsp;·&nbsp;
+<a href="./docs/README.zh-TW.md">繁體中文</a> &nbsp;·&nbsp;
+<a href="./docs/README.ja.md">日本語</a>
 
 </div>
 
 ## 为什么需要这个？
 
-Coding Code 很强，但在实际使用中你是不是经常遇到这些情况：
+Coding agent 很强，但在实际使用中你是不是经常遇到这些情况：
 
 - bug 反复修不好，改了 A 又坏了 B
 - 盲目执行指令，结果和预期天差地别
 - 上下文一丢，之前踩过的坑重新再踩一遍
 - 没有主动的调试策略，全靠猜
 
-**claude-rules** 帮你一键初始化一套可自行演进的规则约束，让你的 AI 协作越用越顺手。
+**RulAI** 帮你一键初始化一套可自行演进的规则约束，让你的 AI 协作越用越顺手。
 
 ## 安装
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JiahaoZhu11/claude-rules/main/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/CNJ-Devs/rulai/main/install.sh)"
 ```
 
-CLI 会安装到 `~/.local/bin/claude-rules`。如果该目录不在 `PATH` 里，安装脚本会提示你添加。
+CLI 会安装到 `~/.local/bin/rulai`。如果该目录不在 `PATH` 里，安装脚本会提示你添加。
 
 ## 使用
 
 ```bash
 cd your-project
-claude-rules setup      # 交互式初始化规则
+rulai setup      # 交互式初始化规则
 ```
 
 ### 所有命令
 
 | 命令 | 说明 |
 |------|------|
-| `claude-rules setup` | 交互式初始化 / 重新配置交互规则 |
-| `claude-rules status` | 查看当前项目的配置和文件状态 |
-| `claude-rules update` | 自更新 CLI 到最新版本 |
-| `claude-rules version` | 显示版本号，并检查是否有更新 |
-| `claude-rules help` | 显示帮助信息 |
+| `rulai setup` | 交互式初始化 / 重新配置交互规则 |
+| `rulai status` | 查看当前项目的配置和文件状态 |
+| `rulai update` | 自更新 CLI 到最新版本 |
+| `rulai version` | 显示版本号，并检查是否有更新 |
+| `rulai help` | 显示帮助信息 |
 
 ## 规则一览
 
