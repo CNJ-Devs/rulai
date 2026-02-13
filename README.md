@@ -1,9 +1,19 @@
-# claude-rules
+<p align="center">
+  <img src="docs/assets/logo.svg" width="160" alt="claude-rules logo" />
+</p>
 
-<!-- logo（之后替换）-->
-<!-- <p align="center"><img src="docs/assets/logo.svg" width="120" /></p> -->
+<h1 align="center">claude-rules</h1>
 
-> 一键为任何项目初始化 Claude Code 交互规则 —— 调试升级、卡住处理、反思机制等，开箱即用。
+<p align="center">
+  一键为任何项目初始化 Claude Code 交互规则 —— 调试升级、卡住处理、反思机制等，开箱即用。
+</p>
+
+<p align="center">
+  <a href="#安装">安装</a> &nbsp;·&nbsp;
+  <a href="#使用">使用</a> &nbsp;·&nbsp;
+  <a href="#规则一览">规则一览</a> &nbsp;·&nbsp;
+  <a href="LICENSE">MIT License</a>
+</p>
 
 ## 为什么需要这个？
 
