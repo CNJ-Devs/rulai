@@ -1,7 +1,7 @@
 <div align="center">
 
 <img src="./assets/logo.svg" width="300" alt="RulAI logo" />
-<br>
+<br></br>
 
 RulAI —— 開箱即用的 coding agent 互動規則：除錯升級、錯誤熔斷、反思機制，一鍵初始化。
 
