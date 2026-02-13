@@ -3,63 +3,63 @@
 <img src="docs/assets/logo.svg" width="300" alt="RulAI logo" />
 <br>
 
-RulAI —— 开箱即用的 coding agent 交互规则：调试升级、错误熔断、反思机制，一键初始化。
+RulAI — Out-of-the-box interaction rules for coding agents: debug escalation, error circuit-breaking, reflection, and more.
 
-<a href="./docs/README.en.md">English</a> &nbsp;·&nbsp;
-<a href="./README.md">简体中文</a> &nbsp;·&nbsp;
+<a href="./README.md">English</a> &nbsp;·&nbsp;
+<a href="./docs/README.zh-CN.md">简体中文</a> &nbsp;·&nbsp;
 <a href="./docs/README.zh-TW.md">繁體中文</a> &nbsp;·&nbsp;
 <a href="./docs/README.ja.md">日本語</a>
 
 </div>
 
-## 为什么需要这个？
+## Why RulAI?
 
-Coding agent 很强，但在实际使用中你是不是经常遇到这些情况：
+Coding agents are powerful, but you've probably run into these issues:
 
-- bug 反复修不好，改了 A 又坏了 B
-- 盲目执行指令，结果和预期天差地别
-- 上下文一丢，之前踩过的坑重新再踩一遍
-- 没有主动的调试策略，全靠猜
+- Bugs go in circles — fix A, break B
+- Blindly follows instructions — results are miles from expectations
+- Context is lost — same mistakes get repeated over and over
+- No proactive debugging strategy — pure guesswork
 
-**RulAI** 帮你一键初始化一套可自行演进的规则约束，让你的 AI 协作越用越顺手。
+**RulAI** bootstraps a self-evolving set of interaction rules so your AI collaboration gets better over time.
 
-## 安装
+## Installation
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/CNJ-Devs/rulai/main/install.sh)"
 ```
 
-CLI 会安装到 `~/.local/bin/rulai`。如果该目录不在 `PATH` 里，安装脚本会提示你添加。
+The CLI installs to `~/.local/bin/rulai`. If that directory isn't in your `PATH`, the installer will prompt you to add it.
 
-## 使用
+## Usage
 
 ```bash
 cd your-project
-rulai setup      # 交互式初始化规则
+rulai setup      # Interactive rule initialization
 ```
 
-### 所有命令
+### All Commands
 
-| 命令 | 说明 |
-|------|------|
-| `rulai setup` | 交互式初始化 / 重新配置交互规则 |
-| `rulai status` | 查看当前项目的配置和文件状态 |
-| `rulai update` | 自更新 CLI 到最新版本 |
-| `rulai version` | 显示版本号，并检查是否有更新 |
-| `rulai help` | 显示帮助信息 |
+| Command | Description |
+|---------|-------------|
+| `rulai setup` | Interactively initialize / reconfigure interaction rules |
+| `rulai status` | Show current project config and file status |
+| `rulai update` | Self-update the CLI to the latest version |
+| `rulai version` | Show version and check for updates |
+| `rulai help` | Show help |
 
-## 规则一览
+## Rules at a Glance
 
-| # | 规则 | 触发 | 行为 |
-|---|------|------|------|
-| 1 | 拒绝模糊指令 | 指令有歧义 | 追问确认，不默默猜 |
-| 2 | 调试升级 - 加 log | bug 修 1-2 次没好 | 建议加 console.log |
-| 3 | 错误熔断 | 同方案 3+ 轮 | 停下 → 提替代方案 → 用户选了再动 |
-| 4 | 修复后反思 | bug 修好后 | 总结"应该怎么问" |
-| 5 | 记录经验 | 反思完后 | 写入 learned lessons |
-| 6 | 并行探索 | 新功能起步 | 提方案（含跨 agent 选项） |
-| 7 | 文档先行 | 多文件新功能 | 先写 implementation plan |
+| # | Rule | Trigger | Behavior |
+|---|------|---------|----------|
+| 1 | Reject vague instructions | Ambiguous instructions | Ask to clarify, never guess silently |
+| 2 | Debug escalation | Bug not fixed after 1–2 attempts | Suggest adding console.log |
+| 3 | Error circuit-breaking | Same approach 3+ rounds | Stop → propose alternatives → act on user's choice |
+| 4 | Post-fix reflection | After a bug is fixed | Summarize "how should I have asked" |
+| 5 | Record lessons | After reflection | Write to learned lessons file |
+| 6 | Parallel exploration | Starting a new feature | Propose approaches (incl. cross-agent option) |
+| 7 | Docs first | Multi-file new feature | Write implementation plan first |
 
 ## License
 
-本项目基于 [MIT License](LICENSE) 开源，详情请查看 LICENSE 文件。
+This project is open-sourced under the [MIT License](LICENSE).
