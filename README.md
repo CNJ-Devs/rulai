@@ -1,11 +1,10 @@
 <div align="center">
 
 <img src="docs/assets/logo.svg" width="300" alt="claude-rules logo" />
-<br><br>
 
 # claude-rules
 
-一键为任何项目初始化 Claude Code 交互规则 —— 调试升级、卡住处理、反思机制等，开箱即用。
+Claude Code 交互规则初始化工具 —— 调试升级、卡住处理、反思机制等，开箱即用。
 
 <a href="#安装">安装</a> &nbsp;·&nbsp;
 <a href="#使用">使用</a> &nbsp;·&nbsp;
