@@ -1,24 +1,24 @@
 #!/usr/bin/env bash
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# claude-rules installer
+# rulai installer
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 #
 # Usage:
-#   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JiahaoZhu11/claude-rules/main/install.sh)"
+#   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/CNJ-Devs/rulai/main/install.sh)"
 #
 set -euo pipefail
 
 # ── Change this to your repo ──
-REMOTE_BASE="${CLAUDE_RULES_REMOTE:-https://raw.githubusercontent.com/JiahaoZhu11/claude-rules/main}"
-INSTALL_DIR="${CLAUDE_RULES_HOME:-${HOME}/.local/bin}"
-BIN_NAME="claude-rules"
+REMOTE_BASE="${RULAI_REMOTE:-https://raw.githubusercontent.com/CNJ-Devs/rulai/main}"
+INSTALL_DIR="${RULAI_HOME:-${HOME}/.local/bin}"
+BIN_NAME="rulai"
 
 RED='\033[0;31m'  GREEN='\033[0;32m'
 YELLOW='\033[1;33m' BOLD='\033[1m'
 DIM='\033[2m'     NC='\033[0m'
 
 echo ""
-printf "  ${BOLD}Installing claude-rules${NC}\n"
+printf "  ${BOLD}Installing RulAI${NC}\n"
 echo "  ━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 
@@ -37,7 +37,7 @@ else
   echo "  ${REMOTE_BASE}/bin/${BIN_NAME}"
   echo ""
   echo "  If you're installing from a local copy, run:"
-  echo "    cp claude-rules ${INSTALL_DIR}/${BIN_NAME} && chmod +x ${INSTALL_DIR}/${BIN_NAME}"
+  echo "    cp rulai ${INSTALL_DIR}/${BIN_NAME} && chmod +x ${INSTALL_DIR}/${BIN_NAME}"
   exit 1
 fi
 
@@ -55,5 +55,5 @@ printf "  ${GREEN}✓${NC}  Installed ${BOLD}${BIN_NAME}${NC} to ${INSTALL_DIR}/
 echo ""
 echo "  Get started:"
 echo "    cd your-project"
-echo "    claude-rules setup"
+echo "    rulai setup"
 echo ""
